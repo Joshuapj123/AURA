@@ -55,7 +55,7 @@ function AgentNode({ data }: { data: Record<string, unknown> }) {
 // ── Initial nodes & edges ─────────────────────────────────────────────────────
 const INIT_NODES = [
   { id:"1", type:"agentNode", position:{x:150,y:10},  data:{label:"USER QUERY",    sub:"input",          icon:"⌨",  status:"idle"} },
-  { id:"2", type:"agentNode", position:{x:150,y:110}, data:{label:"PRIMARY AI",     sub:"gemini-2.5-pro", icon:"◈",  status:"idle"} },
+  { id:"2", type:"agentNode", position:{x:150,y:110}, data:{label:"PRIMARY AI",     sub:"llm", icon:"◈",  status:"idle"} },
   { id:"3", type:"agentNode", position:{x:10,y:240},  data:{label:"FACT CHECKER",   sub:"agent-02",       icon:"⊡",  status:"idle"} },
   { id:"4", type:"agentNode", position:{x:150,y:240}, data:{label:"HALLUC ENGINE",  sub:"agent-03",       icon:"⚡", status:"idle"} },
   { id:"5", type:"agentNode", position:{x:290,y:240}, data:{label:"CITATION VFR",   sub:"agent-04",       icon:"⊞",  status:"idle"} },
