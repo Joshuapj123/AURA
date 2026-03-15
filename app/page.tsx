@@ -420,8 +420,8 @@ export default function Page() {
   useEffect(() => {
     setMounted(true);
     setLogs([
-      mkLog("SYSTEM", "INFO", "AI Safety Firewall v2.4 initialized"),
-      mkLog("SYSTEM", "INFO", "Bytez JS SDK → google/gemini-2.5-pro"),
+      mkLog("SYSTEM", "INFO", "AURA initialized"),
+      mkLog("SYSTEM", "INFO", "Bytez JS SDK → llm"),
       mkLog("ORCHESTRATOR", "INFO", "5 agents on standby. Awaiting input."),
       mkLog("DECISION", "INFO", "Rich structured output mode enabled."),
     ]);
@@ -504,7 +504,7 @@ export default function Page() {
       <header className="h-11 border-b border-zinc-800 flex items-center px-5 gap-4 bg-zinc-950 shrink-0 z-50">
         <div className="flex items-center gap-2">
           <Shield className="w-4 h-4 text-cyan-400" />
-          <span className="font-mono text-sm font-bold text-cyan-400 tracking-wider">AI SAFETY FIREWALL</span>
+          <span className="font-mono text-sm font-bold text-cyan-400 tracking-wider">AURA</span>
           <span className="font-mono text-[10px] text-zinc-600">v2.4</span>
         </div>
         <div className="flex items-center gap-4 ml-4">
