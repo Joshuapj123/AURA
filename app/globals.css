@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: #09090b;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #18181b; }
+::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 2px; }
+
+.glass-card {
+  background: rgba(24, 24, 27, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(63, 63, 70, 0.8);
+}
+
+.glow-cyan  { box-shadow: 0 0 20px rgba(34,211,238,0.15); border-color: rgba(34,211,238,0.4) !important; }
+.glow-green { box-shadow: 0 0 20px rgba(52,211,153,0.15); border-color: rgba(52,211,153,0.4) !important; }
+.glow-red   { box-shadow: 0 0 20px rgba(239,68,68,0.25);  border-color: rgba(239,68,68,0.5)  !important; }
+
+.cyber-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(34,211,238,0.5), 0 0 20px rgba(34,211,238,0.1);
+  border-color: rgba(34,211,238,0.6) !important;
+}
+
+/* Quarantine stamp overlay */
+.quarantine-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(239,68,68,0.07);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border-radius: 8px;
+}
+.quarantine-stamp {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: rgba(239,68,68,0.9);
+  border: 3px solid rgba(239,68,68,0.6);
+  padding: 6px 16px;
+  transform: rotate(-12deg);
+  text-shadow: 0 0 20px rgba(239,68,68,0.8);
+}
+
+/* Terminal cursor blink */
+.terminal-cursor::after {
+  content: '█';
+  color: #22d3ee;
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+/* Scanline texture */
+.scanlines::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* React Flow overrides */
+.react-flow__background { background: transparent !important; }
+.react-flow__handle {
+  width: 6px !important; height: 6px !important;
+  background: #09090b !important;
+  border: 1px solid rgba(34,211,238,0.4) !important;
+  border-radius: 50% !important;
+}
+.react-flow__node-agentNode { background: transparent !important; border: none !important; padding: 0 !important; }
