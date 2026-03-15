@@ -3,7 +3,7 @@ import Bytez from "bytez.js";
 
 // ─── Bytez setup — key read from Vercel environment variable ──────────────────
 // In Vercel dashboard → Settings → Environment Variables → add BYTEZ_API_KEY
-const sdk = new Bytez(process.env.BYTEZ_API_KEY ?? "72537a96ed58d29910699530c8a21e78");
+const sdk = new Bytez(process.env.BYTEZ_API_KEY ?? "1ea8c6da8a15a67be1f1a83fde3e6dfc");
 const model = sdk.model("openai/gpt-4o-mini");
 
 // ─── Extract plain string from any Bytez output shape ─────────────────────────
